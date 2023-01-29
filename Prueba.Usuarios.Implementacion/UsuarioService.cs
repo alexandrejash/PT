@@ -12,12 +12,15 @@ namespace Prueba.Usuarios.Implementacion
     {
         public Prueba.Usuarios.Dominio.Usuarios ObtenerUsuario(int IdUsuario)
         {
-            return null;
-                }
+            using (var instancia = new Prueba.Usuarios.Fachada.UsuarioFachada())
+                return instancia.ObtenerUsuario(IdUsuario);
+        }
 
     public IEnumerable<Prueba.Usuarios.Dominio.Usuarios> ListarUsuarios()
     {
-            return null;
+
+            using (var instancia = new Prueba.Usuarios.Fachada.UsuarioFachada())
+                return instancia.ListarUsuarios();
 
         }
     }
