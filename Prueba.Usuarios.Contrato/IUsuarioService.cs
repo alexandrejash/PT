@@ -17,7 +17,9 @@ namespace Prueba.Usuarios.Contrato
     public interface IUsuarioService
     {
         //metodos
+     
         [OperationContract]
+        [FaultContract(typeof(Error))]  // Manejar error
         Prueba.Usuarios.Dominio.Usuarios  ObtenerUsuario(int IdUsuario);
         [OperationContract]
         IEnumerable<Prueba.Usuarios.Dominio.Usuarios> ListarUsuarios();
