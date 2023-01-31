@@ -22,7 +22,7 @@ namespace Prueba.Usuarios.SqlRepositorio
                 conexion.Open();
                 var parametros = new DynamicParameters();
                 parametros.Add("IdUsuario", IdUsuario);
-                var usuario = conexion.QuerySingle<Prueba.Usuarios.Dominio.Usuarios>("dbo.SP_usuario_Buscar", param: parametros, commandType: CommandType.StoredProcedure);
+                var usuario = conexion.QuerySingle<Prueba.Usuarios.Dominio.Usuarios>("dbo.sp_usuario_obtener", param: parametros, commandType: CommandType.StoredProcedure);
                 return usuario;
             }
         }
