@@ -18,8 +18,8 @@ namespace Prueba.Usuarios.WEB2
         {
             using(ServiceReference2.UsuarioServiceClient client = new ServiceReference2.UsuarioServiceClient())
             {
-                GridView1.DataSource = client.ListarUsuarios();
-                GridView1.DataBind();
+                gv.DataSource = client.ListarUsuarios();
+                gv.DataBind();
             }
         }
 
