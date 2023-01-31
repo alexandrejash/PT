@@ -16,7 +16,7 @@ namespace Prueba.Usuarios.WEB2
 
         protected void Unnamed2_Click(object sender, EventArgs e)
         {
-            using ( ServiceReference1.Usuarios= new ServiceReference1.Usuarios() )
+            using ( )
             {
 
 
