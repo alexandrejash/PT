@@ -14,13 +14,18 @@ namespace Prueba.Usuarios.WEB2
 
         }
 
-        protected void Unnamed2_Click(object sender, EventArgs e)
+       private void Consultar()
         {
-            using ( )
+            using(ServiceReference2.UsuarioServiceClient client = new ServiceReference2.UsuarioServiceClient())
             {
-
-
+                GridView1.DataSource = client.ListarUsuarios();
+                GridView1.DataBind();
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Consultar();
         }
     }
 }

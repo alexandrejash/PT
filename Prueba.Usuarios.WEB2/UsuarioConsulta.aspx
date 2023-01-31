@@ -8,11 +8,15 @@
     <title></title>
 </head>
 <body>
-    <asp:GridView runat="server"></asp:GridView>
-    <asp:Button runat="server" Text="Button" OnClick="Unnamed2_Click"></asp:Button>
+    
+    
     <form id="form1" runat="server">
         <div>
+            <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
+
         </div>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="consultar" />
     </form>
 </body>
 </html>

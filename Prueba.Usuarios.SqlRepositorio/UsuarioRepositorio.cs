@@ -32,7 +32,7 @@ namespace Prueba.Usuarios.SqlRepositorio
         {
             using (IDbConnection conexion = new SqlConnection(ConexionRepositorio.obtenerCadenaconexion()))
             {
-                var usuarios = conexion.Query<Prueba.Usuarios.Dominio.Usuarios>("dbo.SP_usuario_listar", commandType: CommandType.StoredProcedure);
+                var usuarios = conexion.Query<Prueba.Usuarios.Dominio.Usuarios>("dbo.sp_usuario_listar", commandType: CommandType.StoredProcedure);
                 return usuarios;
             
             }
