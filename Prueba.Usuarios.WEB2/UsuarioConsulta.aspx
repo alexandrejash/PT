@@ -17,18 +17,8 @@
     <form id="form1" runat="server">
         <div>
 
-
-
-
-
-
-
-
         </div>
-
-
-
-
+      
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="consultar" />
 
        
@@ -37,11 +27,9 @@
                      
                         <asp:TemplateField HeaderText="Modificar">
                             <ItemTemplate>
-                                <div class="btn-group">
-                                  
-                                   
-                                    <asp:LinkButton runat="server" ID="BtnUpdate" class="btn btn-outline-secondary "><span class=" bi bi-pencil-square"  style="color: yellowgreen;" title="Editar"></span> </asp:LinkButton>
-                                    <asp:LinkButton runat="server" type="button" ID="BtnDelete" title="Eliminar" class="btn btn-outline-secondary">
+                                <div class="btn-group">                                 
+                                   <asp:LinkButton runat="server" ID="BtnUpdate" OnClick="BtnUpdate_Click" class="btn btn-outline-secondary "><span class=" bi bi-pencil-square"  style="color: yellowgreen;" title="Editar"></span> </asp:LinkButton>
+                                    <asp:LinkButton runat="server" type="button" OnClick="BtnDelete_Click"  ID="BtnDelete" title="Eliminar" class="btn btn-outline-secondary">
                                          <span class=" bi bi-trash3"  style="color: red;"></span> 
                                     </asp:LinkButton>
                                 </div>

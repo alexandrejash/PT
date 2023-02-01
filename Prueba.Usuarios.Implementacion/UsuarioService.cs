@@ -14,18 +14,13 @@ namespace Prueba.Usuarios.Implementacion
         public Prueba.Usuarios.Dominio.Usuarios ObtenerUsuario(int IdUsuario)
         {
 
-            try
-            {
+          
 
 
                 using (var instancia = new Prueba.Usuarios.Fachada.UsuarioFachada())
                     return instancia.ObtenerUsuario(IdUsuario);
-            }
-            catch (Exception)
-            {
-                // verificar -- 
-                throw new FaultException<Error>(new Error() { codigoError = "1", descripcionError = " Servicio", mensajeError = "222" });
-            }
+          
+           
        
            
         }
