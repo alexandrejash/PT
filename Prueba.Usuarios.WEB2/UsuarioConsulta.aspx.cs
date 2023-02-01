@@ -27,32 +27,5 @@ namespace Prueba.Usuarios.WEB2
         {
             Consultar();
         }
-
-        
-
-      
-
-        protected void BtnDelete_Click(object sender, EventArgs e)
-        {
-            string id;
-            LinkButton BtnConsultar = (LinkButton)sender;
-
-            GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[0].Text;
-
-            Response.Redirect("~/Usuario.aspx?id=" + id + "&op=D");
-        }
-
-
-        protected void BtnUpdate_Click(object sender, EventArgs e)
-        {
-            string id;
-            LinkButton BtnConsultar = (LinkButton)sender;
-
-            GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
-            id = selectedrow.Cells[0].Text;
-
-            Response.Redirect("~/Usuario.aspx?id=" + id + "&op=U");
-        }
     }
 }
