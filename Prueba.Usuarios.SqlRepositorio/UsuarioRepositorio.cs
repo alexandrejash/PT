@@ -40,5 +40,16 @@ namespace Prueba.Usuarios.SqlRepositorio
                
         }
 
+        public Dominio.Usuarios GestionarUsuario(string accion)
+        {
+            using (IDbConnection conexion = new SqlConnection(ConexionRepositorio.obtenerCadenaconexion()))
+            {
+                conexion.Open();
+                var parametros = new DynamicParameters();
+                parametros.Add("Accion", accion);
+                var usuario = conexion.QuerySingle<Prueba.Usuarios.Dominio.Usuarios>("dbo.sp_GestionarUsuario", param: parametros, commandType: CommandType.StoredProcedure);
+                return usuario;
+            }
+        }
     }
 }

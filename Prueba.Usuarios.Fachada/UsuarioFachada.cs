@@ -25,8 +25,11 @@ namespace Prueba.Usuarios.Fachada
                 return instancia.ListarUsuarios();
 
         }
-
-
+        public Prueba.Usuarios.Dominio.Usuarios GestionarUsuario( string accion)
+        {
+            IUsuarioRepositorio instancia = new UsuarioRepositorio();
+            return instancia.GestionarUsuario(accion);
+        }
 
 
         public void Dispose()

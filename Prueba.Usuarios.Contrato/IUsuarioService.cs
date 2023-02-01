@@ -23,6 +23,7 @@ namespace Prueba.Usuarios.Contrato
         Prueba.Usuarios.Dominio.Usuarios  ObtenerUsuario(int IdUsuario);
         [OperationContract]
         IEnumerable<Prueba.Usuarios.Dominio.Usuarios> ListarUsuarios();
-
+        [OperationContract]
+        Prueba.Usuarios.Dominio.Usuarios GestionarUsuario(string accion);
     }
 }

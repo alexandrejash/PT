@@ -32,5 +32,13 @@ namespace Prueba.Usuarios.Implementacion
                 return instancia.ListarUsuarios();
 
         }
+
+      
+
+        public Dominio.Usuarios GestionarUsuario(string accion)
+        {
+            using (var instancia = new Prueba.Usuarios.Fachada.UsuarioFachada())
+                return instancia.GestionarUsuario(accion);
+        }
     }
 }

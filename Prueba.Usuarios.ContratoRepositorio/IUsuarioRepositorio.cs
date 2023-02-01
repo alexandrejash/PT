@@ -11,7 +11,7 @@ namespace Prueba.Usuarios.ContratoRepositorio
         Prueba.Usuarios.Dominio.Usuarios ObtenerUsuario(int IdUsuario);
 
         IEnumerable<Prueba.Usuarios.Dominio.Usuarios> ListarUsuarios();
-       
 
+        Prueba.Usuarios.Dominio.Usuarios GestionarUsuario(string accion);
     }
 }
